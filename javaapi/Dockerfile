@@ -9,6 +9,6 @@ FROM openjdk:8
 WORKDIR /usr/src/app/
 COPY --from=BUILD_IMAGE /usr/src/app/target/book-work-0.0.1-SNAPSHOT.jar ./book-work-0.0.1.jar
 
-EXPOSE 9000
+EXPOSE 9000      #Inform Docker that the container listens on port 9000 at runtime
 ENTRYPOINT ["java","-jar","book-work-0.0.1.jar"]
 # Test
